@@ -9,7 +9,7 @@
     "format": "prettier --write '{*.js,src/**/*.{js,jsx}}'",
     "lint": "eslint src/",
     "test": "jest",
-    "test:watch":"jest --watch"
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -65,9 +65,13 @@
     "url": "https://github.com/gndx/platzi-store/issues"
   },
   "homepage": "https://github.com/gndx/platzi-store/#readme",
-  "jest":{
-    "setupFileAfterEnv":[
+  "jest": {
+    "setupFilesAfterEnv": [
       "<rootDir>/src/__test__/setupTest.js"
-    ]
+    ],
+    "moduleNameMapper": {
+      "\\.(styl|css)$": "<rootDir>/src/__mocks__/styleMock.js"
+    },
+    "testEnvironment": "jsdom"
   }
 }
