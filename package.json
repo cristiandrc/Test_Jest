@@ -9,7 +9,8 @@
     "format": "prettier --write '{*.js,src/**/*.{js,jsx}}'",
     "lint": "eslint src/",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:update": "jest --updateSnapshot"
   },
   "repository": {
     "type": "git",
@@ -62,6 +63,7 @@
     "jsdom": "^20.0.3",
     "jsdom-global": "^3.0.2",
     "prettier": "^1.19.1",
+    "react-test-renderer": "^16.14.0",
     "webpack-dev-server": "^3.9.0"
   },
   "bugs": {
