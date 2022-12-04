@@ -60,6 +60,7 @@
     "eslint-plugin-react": "^7.14.3",
     "jest": "^29.3.1",
     "jest-environment-jsdom": "^29.3.1",
+    "jest-fetch-mock": "^3.0.3",
     "jsdom": "^20.0.3",
     "jsdom-global": "^3.0.2",
     "prettier": "^1.19.1",
@@ -78,6 +79,6 @@
       "\\.(styl|css)$": "<rootDir>/src/__mocks__/styleMock.js"
     },
     "testEnvironment": "jsdom",
-    "verbose":true
+    "verbose": true
   }
 }
