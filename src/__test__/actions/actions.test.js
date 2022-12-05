@@ -1,9 +1,9 @@
-import actions from '../../actions/';
+import actions from '../../actions';
 import ProductMock from '../../__mocks__/ProductMock';
 
-describe('Actions', () => {
-  const payload = ProductMock;
+describe('actions', () => {
   test('addToCart Action', () => {
+    const payload = ProductMock;
     const expected = {
       type: 'ADD_TO_CART',
       payload,
@@ -12,7 +12,8 @@ describe('Actions', () => {
     expect(actions.addToCart(payload)).toEqual(expected);
   });
 
-  test('removeCart actions', () => {
+  test('REMOVE_FROM_CART', () => {
+    const payload = ProductMock;
     const expected = {
       type: 'REMOVE_FROM_CART',
       payload,

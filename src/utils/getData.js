@@ -1,7 +1,8 @@
-const getData = api => {
+const getData = (api) => {
   return fetch(api)
     .then(response => response.json())
-    .then(result => result)
+    .then(response => response)
     .catch(error => error);
 };
+
 export default getData;

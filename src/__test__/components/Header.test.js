@@ -1,38 +1,39 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
+import { create } from 'react-test-renderer';
 import ProviderMock from '../../__mocks__/ProviderMock';
 import Header from '../../components/Header';
-import { create } from 'react-test-renderer';
 
 describe('<Header/>', () => {
-  test('render del componente header', () => {
+  test('Render Component', () => {
     const header = shallow(
       <ProviderMock>
         <Header />
-      </ProviderMock>
+      </ProviderMock>,
     );
 
     expect(header.length).toEqual(1);
   });
 
-  test('render del titulo', () => {
+  test('H1 Render', () => {
     const header = mount(
       <ProviderMock>
         <Header />
-      </ProviderMock>
+      </ProviderMock>,
     );
+
     expect(header.find('.Header-title').text()).toEqual('Platzi Store');
   });
 });
 
-//para actualizar los snapshot ejecutamos jest --updateSnapshot
-describe('Header snapShot', () => {
-  test('comprobar el snapshot de header ', () => {
+describe('Header SnapShot', () => {
+  test('Check Header SnapShop', () => {
     const header = create(
       <ProviderMock>
         <Header />
-      </ProviderMock>
+      </ProviderMock>,
     );
+
     expect(header.toJSON()).toMatchSnapshot();
   });
 });

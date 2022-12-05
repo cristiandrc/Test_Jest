@@ -1,21 +1,22 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import Footer from '../../components/Footer';
 import { create } from 'react-test-renderer';
+import Footer from '../../components/Footer';
 
 describe('<Footer/>', () => {
   const footer = mount(<Footer />);
-  test('render del componente footer', () => {
+
+  test('Component Render Footer', () => {
     expect(footer.length).toEqual(1);
   });
 
-  test('render del titulo', () => {
+  test('H1 Render', () => {
     expect(footer.find('.Footer-title').text()).toEqual('Platzi Store');
   });
 });
 
-describe('Footer snapshot', () => {
-  test('Comprobar la UI del componente footer', () => {
+describe('Footer Snapshot', () => {
+  test('Check UI Footer Component', () => {
     const footer = create(<Footer />);
     expect(footer.toJSON()).toMatchSnapshot();
   });

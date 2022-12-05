@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header snapShot comprobar el snapshot de header  1`] = `
+exports[`Header SnapShot Check Header SnapShop 1`] = `
 <div
   className="Header"
 >
